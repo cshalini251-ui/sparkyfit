@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "http://YOUR_BACKEND_PUBLIC_IP:3010/:path*"
+    },
+    {
+      "source": "/health-data/:path*",
+      "destination": "http://YOUR_BACKEND_PUBLIC_IP:3010/api/health-data/:path*"
+    },
+    {
+      "source": "/openid/:path*",
+      "destination": "http://YOUR_BACKEND_PUBLIC_IP:3010/openid/:path*"
+    },
+    {
+      "source": "/uploads/:path*",
+      "destination": "http://YOUR_BACKEND_PUBLIC_IP:3010/uploads/:path*"
+    }
+  ]
+}
