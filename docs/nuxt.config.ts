@@ -1,5 +1,7 @@
 import { resolve } from 'path'
 
+const resolvePath = (p: string) => resolve(__dirname, p).replace(/\\/g, '/')
+
 export default defineNuxtConfig({
   // https://github.com/nuxt-themes/docus
   extends: ['@nuxt-themes/docus'],
@@ -18,19 +20,19 @@ export default defineNuxtConfig({
     imports: [
       {
         name: 'useDocus',
-        from: resolve(__dirname, 'node_modules/@nuxt-themes/docus/composables/useDocus.ts')
+        from: resolvePath('node_modules/@nuxt-themes/docus/composables/useDocus.ts')
       },
       {
         name: 'useMenu',
-        from: resolve(__dirname, 'node_modules/@nuxt-themes/docus/composables/useMenu.ts')
+        from: resolvePath('node_modules/@nuxt-themes/docus/composables/useMenu.ts')
       },
       {
         name: 'useScrollspy',
-        from: resolve(__dirname, 'node_modules/@nuxt-themes/docus/composables/useScrollspy.ts')
+        from: resolvePath('node_modules/@nuxt-themes/docus/composables/useScrollspy.ts')
       },
       {
         name: 'useDocSearch',
-        from: resolve(__dirname, 'node_modules/@nuxt-themes/docus/composables/useDocSearch.ts')
+        from: resolvePath('node_modules/@nuxt-themes/docus/composables/useDocSearch.ts')
       }
     ]
   }
